@@ -21,5 +21,8 @@
   "homepage": "https://github.com/howiesommerfeld/my-tech-journey#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "10.16.3"
   }
 }
