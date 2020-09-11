@@ -1,0 +1,23 @@
+{
+  "name": "my-tech-journey",
+  "version": "1.0.0",
+  "description": "A portfolio app demonstrating my web development skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howiesommerfeld/my-tech-journey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/howiesommerfeld/my-tech-journey/issues"
+  },
+  "homepage": "https://github.com/howiesommerfeld/my-tech-journey#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
