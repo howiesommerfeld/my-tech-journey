@@ -11,7 +11,7 @@ const MyNavbar = ()=> {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav >
-      <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
+      <Nav.Link as={Link} to="/about">About</Nav.Link>
       <NavDropdown title="Experiences" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to="/experiences/speakk">Speakk</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/experiences/platform45">Platform45</NavDropdown.Item>
