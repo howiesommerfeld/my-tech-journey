@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function List() {
+function Skills() {
     const [list, setList] = useState([])
 
     const getList = () => {
@@ -15,7 +15,7 @@ function List() {
 
     return (
         <div className="App">
-        <h1>List of Items</h1>
+        <h1>List of Skills</h1>
         {/* Check to see if any items are found*/}
         {list.length ? (
             <div>
@@ -30,7 +30,7 @@ function List() {
             </div>
         ) : (
             <div>
-            <h2>No List Items Found</h2>
+            <h2>No Skills Found</h2>
             </div>
         )
         }
@@ -38,4 +38,4 @@ function List() {
     );
 }
 
-export default List;
+export default Skills;
