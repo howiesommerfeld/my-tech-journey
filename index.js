@@ -1,5 +1,12 @@
 const express = require('express');
 const path = require('path');
+const firebase = require("firebase/app");
+require("firebase/firestore");
+
+const firebaseConfig = require('./firebase.config');
+  
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 const app = express();
 
