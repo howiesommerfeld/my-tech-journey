@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="App">
         <Jumbotron>
-            <h1>Hello, world!</h1>
+            <h1>👋 🌍 </h1>
             <p>
                 My name is Howie Sommerfeld. I live in Johannesburg, South Africa and I love technology.
             </p>
