@@ -20,6 +20,20 @@ app.get('/api/getList', (req,res) => {
     console.log('Sent list of items');
 });
 
+app.get('/api/:collectionId/:documentId', (req,res) => {
+    let data = {};
+    const documentRef = firebase.firestore().collection(req.params.collectionId).doc(req.params.documentId);
+    documentRef.get()
+    .then( snapshot => {
+        if(snapshot.exists){
+            data = snapshot.data();
+        }
+    })
+    .catch(error => {data=error;})
+    .finally(()=>{console.log(data);res.json(data)})
+    console.log('Sent list of items');
+});
+
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
