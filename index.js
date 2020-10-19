@@ -1,5 +1,12 @@
 const express = require('express');
 const path = require('path');
+const firebase = require("firebase/app");
+require("firebase/firestore");
+
+const firebaseConfig = require('./firebase.config');
+  
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 const app = express();
 
@@ -10,6 +17,20 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('/api/getList', (req,res) => {
     var list = ["item1", "item2", "item3"];
     res.json(list);
+    console.log('Sent list of items');
+});
+
+app.get('/api/:collectionId/:documentId', (req,res) => {
+    let data = {};
+    const documentRef = firebase.firestore().collection(req.params.collectionId).doc(req.params.documentId);
+    documentRef.get()
+    .then( snapshot => {
+        if(snapshot.exists){
+            data = snapshot.data();
+        }
+    })
+    .catch(error => {data=error;})
+    .finally(()=>{console.log(data);res.json(data)})
     console.log('Sent list of items');
 });
 
