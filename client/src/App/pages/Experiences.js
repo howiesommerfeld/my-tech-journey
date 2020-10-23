@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from "react-router-dom";
+import { capitalizeFirstLetter } from '../helpers/utilities';
 
 function Experiences() {
     const [list, setList] = useState([])
@@ -33,9 +34,7 @@ function Experiences() {
         }
     },[experienceId])
 
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      }
+    
 
     return (
         <div className="App">
