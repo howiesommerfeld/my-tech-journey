@@ -21,7 +21,7 @@ function Experiences() {
         setBusy(true)
         fetch(`/api/experiences/${experienceId}`)
         .then(res => res.json())
-        .then(experience => setExperience(experience))
+        .then(experience => {console.log(experience); setExperience(experience)})
         .catch(e=>{console.log(e.message)})
         .finally(()=>setBusy(false));
     }
@@ -38,12 +38,34 @@ function Experiences() {
 
     return (
         <div className="App">
-        {experienceId === "" ? <h1>List of Experiences</h1> : <h1>List of Experiences at {capitalizeFirstLetter(experienceId)}</h1>}
+        {experienceId === "" ? <h1>Experiences</h1> : <h1>Experiences at {capitalizeFirstLetter(experienceId)}</h1>}
         {busy ?
         <div className="spinner-border" role="status">
           <span className="sr-only">Loading...</span>
         </div> :
-        experience === {} ? <div>No Experiences Found</div>:<h1>{experience.title}</h1>
+        experience === {} ? 
+            <div>No Experiences Found</div>
+            :
+            <div>
+                <h1>{experience.title}</h1>
+                <h3>{experience["sub-title"]}</h3>
+                <h4>{experience["timespan"]}</h4>
+                <div>
+                    <p>
+                        {experience.details}
+                    </p>
+                </div>
+                
+                <div>
+                    Key learnings<br/>
+                    {JSON.stringify(experience.learnings)}
+                </div>
+                <div>
+                    Projects<br/>
+                    {JSON.stringify(experience.projects)}
+                </div>
+                <a href={experience.link} target="blank">{capitalizeFirstLetter(experienceId)} Website</a>
+            </div>
         }
         </div>
     );
