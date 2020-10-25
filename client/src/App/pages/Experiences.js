@@ -5,7 +5,7 @@ import { capitalizeFirstLetter } from '../helpers/utilities';
 function Experiences() {
     const [list, setList] = useState([])
     const [busy, setBusy] = useState(false)
-    const [experience, setExperience] = useState({})
+    const [experience, setExperience] = useState(null)
     let {experienceId} = useParams();
 
     const getList = () => {
@@ -21,7 +21,7 @@ function Experiences() {
         setBusy(true)
         fetch(`/api/experiences/${experienceId}`)
         .then(res => res.json())
-        .then(experience => {console.log(experience); setExperience(experience)})
+        .then(experience => {setExperience(experience)})
         .catch(e=>{console.log(e.message)})
         .finally(()=>setBusy(false));
     }
@@ -43,7 +43,7 @@ function Experiences() {
         <div className="spinner-border" role="status">
           <span className="sr-only">Loading...</span>
         </div> :
-        experience === {} ? 
+        experience === null ? 
             <div>No Experiences Found</div>
             :
             <div>
@@ -58,11 +58,11 @@ function Experiences() {
                 
                 <div>
                     Key learnings<br/>
-                    {JSON.stringify(experience.learnings)}
+                    {experience.learnings.length === 0 ? <></>  : JSON.stringify(experience.learnings)}
                 </div>
                 <div>
                     Projects<br/>
-                    {JSON.stringify(experience.projects)}
+                    {experience.projects.length === 0 ? <></>  : JSON.stringify(experience.projects)}
                 </div>
                 <a href={experience.link} target="blank">{capitalizeFirstLetter(experienceId)} Website</a>
             </div>
