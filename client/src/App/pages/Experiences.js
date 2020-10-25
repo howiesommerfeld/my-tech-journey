@@ -27,7 +27,7 @@ function Experiences() {
     }
 
     useEffect(()=>{
-        if(typeof experienceId !== "underfined" && experienceId !== ""){
+        if(typeof experienceId !== "undefined" && experienceId !== ""){
             getExperience();
         } else {
             getList();
