@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from "react-router-dom";
+import Learning from '../Components/Experiences/Learning';
+import Project from '../Components/Experiences/Project';
 import { capitalizeFirstLetter } from '../helpers/utilities';
 
 function Experiences() {
@@ -57,12 +59,24 @@ function Experiences() {
                 </div>
                 
                 <div>
-                    Key learnings<br/>
-                    {experience.learnings.length === 0 ? <></>  : JSON.stringify(experience.learnings)}
+                    
+                    {experience.learnings.length === 0 ? 
+                        <></>  :
+                        <>
+                            Key learnings<br/>
+                            {experience.learnings.map((item,index)=> <Learning learningData={item} key={index}/>)}
+                        </>
+                    }
                 </div>
                 <div>
-                    Projects<br/>
-                    {experience.projects.length === 0 ? <></>  : JSON.stringify(experience.projects)}
+                    
+                    {experience.projects.length === 0 ? 
+                        <></>  : 
+                        <>
+                            Projects<br/>
+                            {experience.projects.map((item,index)=> <Project projectData={item} key={index}/>)}
+                        </>
+                    }
                 </div>
                 <a href={experience.link} target="blank">{capitalizeFirstLetter(experienceId)} Website</a>
             </div>
