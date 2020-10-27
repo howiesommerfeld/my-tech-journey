@@ -75,7 +75,7 @@ function Experiences() {
               </>
           }
           </div>
-          <a href={experience.link} target="blank">{capitalizeFirstLetter(experienceId)} Website</a>
+          <a class="btn btn-sm btn-outline-secondary" href={experience.link} target="blank">{capitalizeFirstLetter(experienceId)} Website</a>
         </div>
     }
     </div>
