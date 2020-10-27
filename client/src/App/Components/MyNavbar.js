@@ -19,7 +19,7 @@ const MyNavbar = ()=> {
         <NavDropdown.Divider />
           <NavDropdown.Item as={Link} to="/experiences/university">University</NavDropdown.Item>
       </NavDropdown>
-      <Nav.Link as={Link} to="/shout-outs">Info</Nav.Link>
+      <Nav.Link as={Link} to="/info">Info</Nav.Link>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
