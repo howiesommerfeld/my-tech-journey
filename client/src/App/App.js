@@ -10,8 +10,8 @@ import MyNavbar from './Components/MyNavbar';
 function App() {
   return (
     <div className="App">
+      <MyNavbar />
       <div className="container">
-        <MyNavbar />
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/about' component={About}/>
