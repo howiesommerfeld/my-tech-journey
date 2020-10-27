@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
-import ShoutOuts from './pages/ShoutOuts';
+import Info from './pages/Info';
 import Experiences from './pages/Experiences';
 import MyNavbar from './Components/MyNavbar';
 
@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/' component={Home}/>
           <Route path='/about' component={About}/>
           <Route path='/experiences/:experienceId' component={Experiences}/>
-          <Route path='/shout-outs' component={ShoutOuts}/>
+          <Route path='/shout-outs' component={Info}/>
         </Switch>
       </div>
     </div>

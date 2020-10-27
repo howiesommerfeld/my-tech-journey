@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function ShoutOuts() {
+function Info() {
     const [list, setList] = useState([])
 
     const getList = () => {
@@ -15,7 +15,7 @@ function ShoutOuts() {
 
     return (
         <div className="App">
-        <h1>List of Shout Outs</h1>
+        <h1>Contact Info & Downloads</h1>
         {/* Check to see if any items are found*/}
         {list.length ? (
             <div>
@@ -38,4 +38,4 @@ function ShoutOuts() {
     );
 }
 
-export default ShoutOuts;
+export default Info;
