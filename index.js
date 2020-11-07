@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const firebase = require("firebase/app");
+const compression = require('compression')
 require("firebase/firestore");
 require('dotenv').config()
 
@@ -22,6 +23,7 @@ const app = express();
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(compression())
 
 // A dummy api endpoint that returns a short list of items
 app.get('/api/getList', (req,res) => {
