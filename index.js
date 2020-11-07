@@ -20,10 +20,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const app = express();
+app.use(compression())
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
-app.use(compression())
 
 // A dummy api endpoint that returns a short list of items
 app.get('/api/getList', (req,res) => {
