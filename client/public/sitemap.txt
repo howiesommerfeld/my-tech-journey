@@ -1,0 +1,7 @@
+https://my-tech-journey.herokuapp.com/
+https://my-tech-journey.herokuapp.com/about
+https://my-tech-journey.herokuapp.com/experiences/university
+https://my-tech-journey.herokuapp.com/experiences/speakk
+https://my-tech-journey.herokuapp.com/experiences/platform45
+https://my-tech-journey.herokuapp.com/experiences/gigster
+https://my-tech-journey.herokuapp.com/info
