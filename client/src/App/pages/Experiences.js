@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useParams} from "react-router-dom";
+import Details from '../Components/Experiences/Details';
 import Learnings from '../Components/Experiences/Learnings';
 import Projects from '../Components/Experiences/Projects';
 import { capitalizeFirstLetter } from '../helpers/utilities';
@@ -55,7 +56,10 @@ function Experiences() {
             </div>
           </div>
           <p>
-              {experience.details}
+              {experience.details.length === 0 ? 
+                <></> : 
+                <Details detailsArray={experience.details}/>
+              }
           </p>
           <div>
           {experience.learnings.length === 0 ? 
