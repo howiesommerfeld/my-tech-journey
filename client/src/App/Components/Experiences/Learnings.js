@@ -2,7 +2,7 @@ import React from 'react';
 import { mapArrayIntoChunksOfLen } from '../../helpers/utilities';
 import './Learnings.css'
 
-function Learning({learningsArray}) {
+function Learnings({learningsArray}) {
   const learningsChunks = mapArrayIntoChunksOfLen(learningsArray,3);
   return (
     learningsChunks.map((chunk, rowIndex)=>{
@@ -24,4 +24,4 @@ function Learning({learningsArray}) {
   )
 }
 
-export default Learning;
+export default Learnings;
