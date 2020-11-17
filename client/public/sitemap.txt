@@ -5,3 +5,4 @@ https://my-tech-journey.herokuapp.com/experiences/speakk
 https://my-tech-journey.herokuapp.com/experiences/platform45
 https://my-tech-journey.herokuapp.com/experiences/gigster
 https://my-tech-journey.herokuapp.com/info
+https://my-tech-journey.herokuapp.com/contact
