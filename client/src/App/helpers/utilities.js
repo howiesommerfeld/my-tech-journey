@@ -1,5 +1,5 @@
 export function seo(data = {}) {
-  data.title = data.title || 'From App Developer Graduate to Startup Founder; This Is My Tech Journey';
+  data.title = data.title || 'My Tech Journey From App Developer Graduate to Startup Founder';
   data.metaDescription = data.metaDescription || "This is the documentation of my professional journey to date as a technical starup founder. It aims to serve as a portfolio of my career thus, a guide for aspiring entrepreneurs and a place for my learnings and experiences to live. ";
 
   document.title = data.title;
