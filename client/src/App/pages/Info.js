@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { seo } from '../helpers/utilities';
 
 function Info() {
+
+  useEffect(()=>{
+    seo({
+      title:"Info | Links to Curriculum Vitae & Tech Profiles ",
+      metaDescription:"It's been a challenge to encapsulate a decade long journey of working in the tech industry into a few web pages. So I've included a few external sources to more technical and verbose information on this page"
+    })
+  },[])
 
   return (
     <div className="App">

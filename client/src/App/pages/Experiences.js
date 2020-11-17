@@ -4,6 +4,7 @@ import Details from '../Components/Experiences/Details';
 import Learnings from '../Components/Experiences/Learnings';
 import Projects from '../Components/Experiences/Projects';
 import { capitalizeFirstLetter } from '../helpers/utilities';
+import { seo } from '../helpers/utilities';
 
 function Experiences() {
   const [list, setList] = useState([])
@@ -30,11 +31,15 @@ function Experiences() {
   }
 
   useEffect(()=>{
-      if(typeof experienceId !== "undefined" && experienceId !== ""){
-          getExperience();
-      } else {
-          getList();
-      }
+    seo({
+      title: "Experiences | Things That Have Enriched My Career",
+      metaDescription:"I believe we are a culmination of everything that happens to us in our lives. I've included some of the more meaningful experiences I've had to date and tried to tap into what made them so impactful. In each case I've highlighted the most relevant projects and reflected on some of the learnings I achieved within each period. Hopefully this can help aspiring entrepreneurs, would-be students or just people wanting to know more about the tech space"
+    })
+    if(typeof experienceId !== "undefined" && experienceId !== ""){
+        getExperience();
+    } else {
+        getList();
+    }
   },[experienceId])
 
   return (
