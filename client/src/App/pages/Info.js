@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { seo } from '../helpers/utilities';
+import {Link} from "react-router-dom"
 
 function Info() {
 
@@ -36,6 +37,13 @@ function Info() {
         <h4>Y Combinator Startup School</h4>
         <p>In 2019 we completed the startup school curriculum. As part of this, we later applied to Y Combinator's W2019 batch and made it through to the round of partner interviews.</p>
       <a class="btn btn-lg btn-outline-secondary" href="https://www.startupschool.org/" target="blank">More About Startup School</a>
+      </div>
+      <div style={{textAlign:"left", padding:15}}>
+        <h4>Get In Touch</h4>
+        <p>Use the button below to send me a message</p>
+        <Link to="/contact">
+          <button className="btn btn-lg btn-outline-secondary">Contact Me</button>
+        </Link>
       </div>
       
     </div>
