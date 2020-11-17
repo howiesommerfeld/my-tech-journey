@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { seo } from '../helpers/utilities';
 
 function Home() {
+  useEffect(()=>{
+    seo({
+      title:"Home | My Tech Journey From App Developer Graduate to Startup Founder",
+    })
+  })
+
   return (
     <div className="App">
       <div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">

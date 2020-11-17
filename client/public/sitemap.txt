@@ -1,7 +1,8 @@
-https://www.howardsommerfeld.com/
-https://www.howardsommerfeld.com/about
-https://www.howardsommerfeld.com/experiences/university
-https://www.howardsommerfeld.com/experiences/speakk
-https://www.howardsommerfeld.com/experiences/platform45
-https://www.howardsommerfeld.com/experiences/gigster
-https://www.howardsommerfeld.com/info
+https://my-tech-journey.herokuapp.com/
+https://my-tech-journey.herokuapp.com/about
+https://my-tech-journey.herokuapp.com/experiences/university
+https://my-tech-journey.herokuapp.com/experiences/speakk
+https://my-tech-journey.herokuapp.com/experiences/platform45
+https://my-tech-journey.herokuapp.com/experiences/gigster
+https://my-tech-journey.herokuapp.com/info
+https://my-tech-journey.herokuapp.com/contact

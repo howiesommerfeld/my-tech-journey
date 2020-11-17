@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../helpers/utilities';
+import { seo } from '../helpers/utilities';
 
 function About() {
   const [busy, setBusy] = useState(false)
   const [skills, setSkills] = useState([])
 
   useEffect(()=>{
+      seo({
+        title:"About | Some Personal Details About What Makes Me Tick",
+        metaDescription:"It's important to remember that we are all human beings. We have interests, hobbies, social lives and ideologies outside of our professional lives. Take a look at some of the things which shape the person that I am "
+      })
       async function getSkills () {
           setBusy(true)
           await fetch(`/api/skills`)
