@@ -103,3 +103,4 @@ dist
 # TernJS port file
 .tern-port
 firebase.config.js
+my-tech-journey-firebase-adminsdk.json
